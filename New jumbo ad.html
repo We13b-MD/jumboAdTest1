@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Google Web Designer 16.1.0.0530">
+  <meta name="template" content="Banner 3.0.0">
+  <meta name="environment" content="gwd-dv360">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="gwdpage_style.css" rel="stylesheet" data-version="13" data-exports-type="gwd-page">
+  <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="14" data-exports-type="gwd-pagedeck">
+  <link href="gwdgooglead_style.css" rel="stylesheet" data-version="9" data-exports-type="gwd-google-ad">
+  <link href="gwdvideo_style.css" rel="stylesheet" data-version="19" data-exports-type="gwd-video">
+  <style id="gwd-lightbox-style">
+    .gwd-lightbox {
+      overflow: hidden;
+    }
+  </style>
+  <style id="gwd-text-style">
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+  </style>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    .gwd-page-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .gwd-page-content {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+    .gwd-page-content * {
+      transform-style: preserve-3d;
+    }
+    .gwd-page-wrapper {
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      transform: translateZ(0px);
+    }
+    .gwd-page-size {
+      width: 300px;
+      height: 250px;
+    }
+    .gwd-video-1fb8 {
+      position: absolute;
+      transform-origin: 50% 50% 0px;
+      left: 0px;
+      top: 0px;
+      height: 250px;
+      width: 300px;
+    }
+  </style>
+  <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
+  <script data-source="gwdpage_min.js" data-version="13" data-exports-type="gwd-page" src="gwdpage_min.js"></script>
+  <script data-source="gwdpagedeck_min.js" data-version="14" data-exports-type="gwd-pagedeck" src="gwdpagedeck_min.js"></script>
+  <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-google-ad" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <script data-source="gwdgooglead_min.js" data-version="9" data-exports-type="gwd-google-ad" src="gwdgooglead_min.js"></script>
+  <script data-source="gwdvideo_min.js" data-version="19" data-exports-type="gwd-video" src="gwdvideo_min.js"></script>
+</head>
+
+<body>
+  <gwd-google-ad id="gwd-ad" polite-load="">
+    <gwd-metric-configuration></gwd-metric-configuration>
+    <gwd-pagedeck class="gwd-page-container" id="pagedeck">
+      <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="300px" data-gwd-height="250px">
+        <div class="gwd-page-content gwd-page-size">
+          <gwd-video muted=""  controls="" sources="assets/336x280 pix (online-video-cutter.com).mp4" id="JumboAd" class="gwd-video-1fb8"  autoplay="" loop=""></gwd-video>
+          <gwd-video muted="" controls="" sources="assets/Zabira 300 by 250.mp4" id="Zabira_300_by_250" class="gwd-video-4pfb" autoplay="" loop=""></gwd-video>
+        </div> 
+      </gwd-page>
+    </gwd-pagedeck>
+  </gwd-google-ad>
+  <script type="text/javascript" id="gwd-init-code">
+    (function() {
+      var gwdAd = document.getElementById('gwd-ad');
+
+      /**
+       * Handles the DOMContentLoaded event. The DOMContentLoaded event is
+       * fired when the document has been completely loaded and parsed.
+       */
+      function handleDomContentLoaded(event) {
+
+      }
+
+      /**
+       * Handles the WebComponentsReady event. This event is fired when all
+       * custom elements have been registered and upgraded.
+       */
+      function handleWebComponentsReady(event) {
+        // Start the Ad lifecycle.
+        requestAnimationFrame(function() {
+          setTimeout(function() {
+            gwdAd.initAd();
+          }, 1);
+        });
+      }
+
+      /**
+       * Handles the event that is dispatched after the Ad has been
+       * initialized and before the default page of the Ad is shown.
+       */
+      function handleAdInitialized(event) {}
+
+      window.addEventListener('DOMContentLoaded',
+        handleDomContentLoaded, false);
+      window.addEventListener('WebComponentsReady',
+        handleWebComponentsReady, false);
+      window.addEventListener('adinitialized',
+        handleAdInitialized, false);
+    })();
+
+    let impressionCount = 0;
+let clickCounts = 0;
+let firstQuartileTracked = 0;
+let midpointTracked = 0;
+let thirdQuartileTracked = 0;
+let completed = 0;
+let isViewable = false;
+
+function getBrowserInfo() {
+  const userAgent = navigator.userAgent;
+  let browser = "Unknown";
+  if (userAgent.indexOf("Chrome") > -1) {
+    browser = "Chrome";
+  } else if (userAgent.indexOf("Firefox") > -1) {
+    browser = "Firefox";
+  } else if (userAgent.indexOf("Safari") > -1) {
+    browser = "Safari";
+  } else if (userAgent.indexOf("Edge") > -1) {
+    browser = "Edge";
+  } 
+  return browser;
+}
+
+function getPhoneType() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  if (userAgent.includes("iphone")) return "iPhone";
+  if (userAgent.includes("android")) return "Android";
+  if (userAgent.includes("windows") || userAgent.includes("macintosh") || userAgent.includes("linux")) return "Desktop";
+  return "Other";
+}
+    
+    function trackEvent(eventName) {
+      console.log(`Event: ${eventName} - Count: ${eval(`
+        $ {
+          eventName
+        }
+        Count `)}`);
+    }
+
+    const gwdVideo = document.getElementById('JumboAd')
+    
+
+    gwdVideo.addEventListener('play', () => {
+    
+      impressionCount++;
+      sendPayload()
+    })
+
+    
+
+    gwdVideo.addEventListener('click', () => {
+      clickCounts++;
+      console.log('Click Counts: ' + clickCounts); // Log click count
+      sendPayload()
+    })
+
+
+    //Track video pause
+
+    gwdVideo.addEventListener('pause', () => {
+      sendPayload()
+    })
+
+    //Track video ended
+    gwdVideo.addEventListener('ended', () => {
+      sendPayload()
+    })
+
+    //Calculation of CTR
+
+    function calculateCTR() {
+      return impressionCount > 0 ? ((clickCounts / impressionCount) * 100).toFixed(2) : 0
+    }
+
+    gwdVideo.addEventListener("timeupdate", () => {
+  const currentTime = gwdVideo.currentTime;
+  const duration = gwdVideo.duration;
+
+  if (!firstQuartileTracked && currentTime >= duration * 0.25) {
+    firstQuartileTracked++;
+    console.log("First Quartile Reached");
+    sendPayload();
+  }
+
+  if (!midpointTracked && currentTime >= duration * 0.5) {
+    midpointTracked++
+    console.log("Midpoint Reached");
+    sendPayload();
+  }
+
+  if (!thirdQuartileTracked && currentTime >= duration * 0.75) {
+    thirdQuartileTracked++;
+    console.log("Third Quartile Reached");
+    sendPayload();
+  }
+});
+
+
+function trackViewability() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!isViewable) {
+            isViewable = true;
+            console.log("Ad is viewable");
+            sendPayload();
+          }
+        } else {
+          isViewable = false;
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  observer.observe(gwdVideo);
+}
+
+function getCountry() {
+  // Default country if fetch fails
+  let defaultCountry = "Unknown";
+
+  // Use synchronous XMLHttpRequest to ensure the country is available immediately
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://ipinfo.io/json?token=f4530ca34b52a9", false); // Replace `YOUR_TOKEN_HERE` with your token
+  try {
+    xhr.send();
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      
+      return response.country || defaultCountry;
+      
+    }
+  } catch (error) {
+    console.error("Error fetching country:", error);
+  }
+
+  return defaultCountry;
+}
+
+function getCurrentDate() {
+  const today = new Date();
+  return today.toISOString().split("T")[0]; // Extracts the date part (e.g., "2024-12-10")
+}
+
+function getCurrentTime() {
+  const now = new Date();
+  return now.toTimeString().split(" ")[0]; // Extracts the time part (e.g., "14:30:00")
+}
+
+
+function getOperatingSystem() {
+  const userAgent = navigator.userAgent.toLowerCase();
+
+  // Determine operating system
+  if (userAgent.includes("windows nt 10.0")) return "Windows 10";
+  if (userAgent.includes("windows nt 11.0")) return "Windows 10";
+  if (userAgent.includes("windows nt 6.2")) return "Windows 8";
+  if (userAgent.includes("windows nt 6.1")) return "Windows 7";
+  if (userAgent.includes("mac os x")) return "macOS";
+  if (userAgent.includes("android")) return "Android";
+  if (userAgent.includes("iphone os")) return "iOS";
+  if (userAgent.includes("linux")) return "Linux";
+  
+  return "Unknown";  // Default value
+}
+
+
+    //send payload to appscript backend
+
+    function sendPayload() {
+  const payload = {
+    impressions: impressionCount,
+    clicks: clickCounts,
+    ctr: calculateCTR(),
+    firstQuartile: firstQuartileTracked,
+    midpoint: midpointTracked,
+    thirdQuartile: thirdQuartileTracked,
+    completed: completed,
+    isViewable: isViewable,
+    browser: getBrowserInfo(),
+    phoneType: getPhoneType(),
+    operatingSystem:getOperatingSystem(),
+    country: getCountry(), // Dynamically fetch country here
+    date: getCurrentDate(), // Current date
+    time: getCurrentTime(), // Current time
+  };
+      fetch("https://script.google.com/macros/s/AKfycbyPxc_RlPsG84UjhkUHWwprVknEJZOXY_C3I31PG3ArJZuppEnR_6RmPePq5UxmS9_L/exec", {
+          redirect: "follow",
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        })
+        .then(() => {
+          // Since you can't access the response, assume success here
+          console.log("Request sent successfully.");
+          console.log(payload)
+        })
+        .catch((error) => console.error("Error:", error));
+
+    }
+  </script>
+</body>
+
+</html>
